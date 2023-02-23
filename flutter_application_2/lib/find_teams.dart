@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class FindTeams extends StatelessWidget {
-  const FindTeams({Key? key});
+  const FindTeams({super.key, Key? keyy});
 
   @override
   Widget build(BuildContext context) {

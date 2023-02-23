@@ -9,7 +9,7 @@ class FindPeople extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('My App'),
+        title: const Text('                    My App'),
       ),
       body: SizedBox(
         height: double.infinity,
@@ -21,9 +21,10 @@ class FindPeople extends StatelessWidget {
               SizedBox(
                 height: 300,
                 child: ElevatedButton.icon(
-                  style: ElevatedButton.styleFrom(primary: Color(0xffD0BCFF)),
-                  icon: Icon(Icons.person, color: Colors.black, size: 50),
-                  label: Text(
+                  style: ElevatedButton.styleFrom(
+                      backgroundColor: const Color(0xffD0BCFF)),
+                  icon: const Icon(Icons.person, color: Colors.black, size: 50),
+                  label: const Text(
                     'Find Friends!',
                     style: TextStyle(color: Colors.black, fontSize: 21),
                   ),
@@ -43,9 +44,10 @@ class FindPeople extends StatelessWidget {
               SizedBox(
                 height: 300,
                 child: ElevatedButton.icon(
-                  style: ElevatedButton.styleFrom(primary: Color(0xffD0BCFF)),
-                  icon: Icon(Icons.people, color: Colors.black, size: 50),
-                  label: Text(
+                  style: ElevatedButton.styleFrom(
+                      backgroundColor: const Color(0xffD0BCFF)),
+                  icon: const Icon(Icons.people, color: Colors.black, size: 50),
+                  label: const Text(
                     'Find Teams!',
                     style: TextStyle(color: Colors.black, fontSize: 21),
                   ),
