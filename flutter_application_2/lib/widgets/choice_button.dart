@@ -30,6 +30,6 @@ class ChoiceButton extends StatelessWidget {
             offset: const Offset(3, 3),
           ),
         ]),
-        child: Icon(icon, color: Colors.red));
+        child: Icon(icon, color: Colors.green));
   }
 }

@@ -92,6 +92,12 @@
       "languageVersion": "2.17"
     },
     {
+      "name": "intl",
+      "rootUri": "file:///C:/Users/foivos/AppData/Local/Pub/Cache/hosted/pub.dev/intl-0.18.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "js",
       "rootUri": "file:///C:/Users/foivos/AppData/Local/Pub/Cache/hosted/pub.dev/js-0.6.5",
       "packageUri": "lib/",
@@ -230,7 +236,7 @@
       "languageVersion": "2.19"
     }
   ],
-  "generated": "2023-02-22T03:21:17.986602Z",
+  "generated": "2023-02-23T15:43:11.829597Z",
   "generator": "pub",
   "generatorVersion": "2.19.2"
 }

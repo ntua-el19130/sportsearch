@@ -2,15 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_2/users_screens.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_application_2/blocs/swipe_bloc.dart';
-
 import 'package:flutter_application_2/models/user_model.dart';
-import 'package:flutter_application_2/widgets/user_card.dart';
 import 'package:flutter_application_2/widgets/widgets.dart';
 
 class FindFriends extends StatefulWidget {
   const FindFriends({Key? key}) : super(key: key);
 
   @override
+  // ignore: library_private_types_in_public_api
   _FindFriendsState createState() => _FindFriendsState();
 }
 
@@ -99,12 +98,11 @@ class _FindFriendsState extends State<FindFriends> {
                       ),
                       InkWell(
                         onTap: () {
-                          Navigator.of(context).push(
+                          Navigator.push(
+                            context,
                             MaterialPageRoute(
-                              builder: (BuildContext context) {
-                                return const UsersScreens();
-                              },
-                            ),
+                                builder: (context) =>
+                                    UsersScreens(user: state.users[0])),
                           );
                         },
                         child: const ChoiceButton(
@@ -124,7 +122,7 @@ class _FindFriendsState extends State<FindFriends> {
                           height: 60,
                           size: 25,
                           color: Colors.white,
-                          icon: Icons.favorite,
+                          icon: Icons.sports_tennis_outlined,
                         ),
                       ),
                     ],
