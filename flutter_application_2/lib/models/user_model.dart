@@ -25,7 +25,7 @@ class User extends Equatable {
       name: 'Θανάσης Ροντοβρόντο',
       age: 35,
       imageUrls: [
-        'https://www.ece.ntua.gr/media/656/image_61ea95203d025.png',
+        'https://www.ece.ntua.gr/media/656/image_61ea95203d025.pnghttps://scontent.fath4-2.fna.fbcdn.net/v/t1.15752-9/332045723_1308580253038880_4134032364263244515_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=ae9488&_nc_ohc=qq5f_vYpBlwAX8uU_HY&_nc_ht=scontent.fath4-2.fna&oh=03_AdT02F555cJgxfBP2lcy0DV1xcdCe2VtclA5fykUNEctIw&oe=641F2EDA',
         'https://members.noa.gr/tronto/IMG_4877.JPG',
         'https://www.astro.noa.gr/wp-content/uploads/2020/01/%CE%A1%CE%BF%CE%BD%CF%84%CE%BF%CE%B3%CE%B9%CE%B1%CC%81%CE%BD%CE%BD%CE%B7%CF%82-%CE%91%CE%B8%CE%B1%CE%BD%CE%B1%CC%81%CF%83%CE%B9%CE%BF%CF%82.jpg',
         'https://scontent.fath3-4.fna.fbcdn.net/v/t1.15752-9/329854868_871142877299324_3885181097965937951_n.png?_nc_cat=103&ccb=1-7&_nc_sid=ae9488&_nc_ohc=TKeavN7jT4gAX-wT6TF&_nc_ht=scontent.fath3-4.fna&oh=03_AdTmq80nAGKsMprjk8o95rrviTyutXiCEE8_leGrySJ5aA&oe=641C1298',
@@ -38,7 +38,7 @@ class User extends Equatable {
       name: 'Πιπεράκος Ελ Τρούκο',
       age: 50,
       imageUrls: [
-        'https://i.ytimg.com/vi/TJrJwBJt9TI/hqdefault.jpg',
+        'https://scontent.fath4-2.fna.fbcdn.net/v/t1.15752-9/332045723_1308580253038880_4134032364263244515_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=ae9488&_nc_ohc=qq5f_vYpBlwAX8uU_HY&_nc_ht=scontent.fath4-2.fna&oh=03_AdT02F555cJgxfBP2lcy0DV1xcdCe2VtclA5fykUNEctIw&oe=641F2EDAhttps://i.ytimg.com/vi/TJrJwBJt9TI/hqdefault.jpg',
         'https://clips-media-assets2.twitch.tv/36157322960-offset-3022-preview-480x272.jpg',
         'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROkwhsnRpumA3_SYfzo6VUY13EI3v9tUhV5Q&usqp=CAU',
         'https://img.youtube.com/vi/FhoyJEpCc8Q/hqdefault.jpg',
