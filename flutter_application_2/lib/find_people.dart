@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_2/find_friends.dart';
-import 'package:flutter_application_2/find_teams.dart';
+import 'package:flutter_application_2/My_Teams_Page.dart';
 
 class FindPeople extends StatelessWidget {
   const FindPeople({super.key});
@@ -55,7 +55,7 @@ class FindPeople extends StatelessWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => const FindTeams()),
+                          builder: (context) => const MyTeamsPage()),
                     );
                   },
                 ),

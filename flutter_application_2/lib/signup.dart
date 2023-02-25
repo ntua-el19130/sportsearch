@@ -14,7 +14,7 @@ class _SignupPageState extends State<SignupPage> {
     return Scaffold(
       backgroundColor: const Color(0xFFD0BCFF),
       appBar: AppBar(
-        title: const Text('Signup'),
+        title: const Text('                    Signup'),
       ),
       body: SingleChildScrollView(
         child: Padding(

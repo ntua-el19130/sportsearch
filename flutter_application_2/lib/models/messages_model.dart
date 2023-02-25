@@ -27,7 +27,7 @@ List<Message> messages = [
     id: 1,
     senderId: 1,
     receiverId: 2,
-    message: 'Hey,how are you?',
+    message: 'Hello,how are you?',
     dateTime: DateTime.now(),
     timeString: DateFormat('jm').format(DateTime.now()),
   )

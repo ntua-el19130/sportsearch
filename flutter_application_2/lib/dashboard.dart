@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_2/login_page.dart';
 import 'package:flutter_application_2/find_people.dart';
 import 'package:flutter_application_2/matches/matches_screen.dart';
-
+import 'package:flutter_application_2/My_Sports_Page.dart';
+import 'package:flutter_application_2/My_Teams_Page.dart';
 class DashboardPage extends StatefulWidget {
   const DashboardPage({super.key});
 
@@ -138,7 +139,7 @@ class _DashboardPageState extends State<DashboardPage> {
                 Navigator.of(context).push(
                   MaterialPageRoute(
                     builder: (BuildContext context) {
-                      return const login_page();
+                      return const MyTeamsPage();
                     },
                   ),
                 );
@@ -158,7 +159,7 @@ class _DashboardPageState extends State<DashboardPage> {
                 Navigator.of(context).push(
                   MaterialPageRoute(
                     builder: (BuildContext context) {
-                      return const login_page();
+                      return const My_Sports_Page();
                     },
                   ),
                 );
