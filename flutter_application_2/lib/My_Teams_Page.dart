@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_2/find_teams.dart';
+import 'package:flutter_application_2/add_teams.dart';
 
 class MyTeamsPage extends StatelessWidget {
   const MyTeamsPage({Key? key}) : super(key: key);
@@ -7,6 +7,7 @@ class MyTeamsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+       backgroundColor: Color(0xffD0BCFF),
       appBar: AppBar(
         title: const Text('My Teams'),
       ),
@@ -21,7 +22,7 @@ class MyTeamsPage extends StatelessWidget {
               onPressed: () {  Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => const FindTeams()),
+                          builder: (context) => const AddTeams()),
                     );},
               icon: const Icon(Icons.add),
               label: const Text('Add a Team'),
