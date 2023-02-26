@@ -1,7 +1,12 @@
+import 'dart:io';
 import 'package:flutter/material.dart';
+import 'package:image_picker/image_picker.dart';
+import 'package:path_provider/path_provider.dart';
+
 
 class MyProfilePage extends StatelessWidget {
-    const MyProfilePage({Key? key}) : super(key: key);
+  const MyProfilePage({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -15,9 +20,39 @@ class MyProfilePage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             SizedBox(height: 20),
-            CircleAvatar(
-              radius: 50,
-              backgroundImage: AssetImage('image/profile.jfif'),
+            Stack(
+              children: [
+                CircleAvatar(
+                  radius: 50,
+                  backgroundImage: AssetImage('image/profile.jfif'),
+                ),
+                Positioned(
+                  bottom: 0,
+                  right: 0,
+                  child: CircleAvatar(
+                    backgroundColor: Colors.white,
+                    radius: 15,
+                    child: CircleAvatar(
+                      backgroundColor: Colors.blue,
+                      radius: 13,
+                      child: IconButton(
+                        onPressed: () async {    final ImagePicker _picker = ImagePicker();
+    final XFile? image = await _picker.pickImage(source: ImageSource.gallery);
+    if (image != null) {
+      File file = File(image.path);
+      String dir = (await getApplicationDocumentsDirectory()).path + "/images";
+      await Directory(dir).create(recursive: true);
+      String newPath = "$dir/${DateTime.now().millisecondsSinceEpoch}.jpg";
+      file.copy(newPath);
+    }},
+                        icon: Icon(Icons.add),
+                        color: Colors.white,
+                        iconSize: 20,
+                      ),
+                    ),
+                  ),
+                ),
+              ],
             ),
             SizedBox(height: 20),
             Text(
