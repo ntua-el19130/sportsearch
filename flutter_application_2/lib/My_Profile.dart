@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_2/camera.dart';
+import 'package:camera/camera.dart';
 
 class MyProfilePage extends StatelessWidget {
-    const MyProfilePage({Key? key}) : super(key: key);
+  ImageProvider imagePath = AssetImage('image/profile.jfif');
+  MyProfilePage({Key? key, required this.imagePath}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -15,9 +19,22 @@ class MyProfilePage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             SizedBox(height: 20),
-            CircleAvatar(
-              radius: 50,
-              backgroundImage: AssetImage('image/profile.jfif'),
+            InkWell(
+              onTap: () async {
+                final cameras = await availableCameras();
+                final firstCamera = cameras.first;
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (BuildContext context) {
+                      return TakePictureScreen(camera: firstCamera);
+                    },
+                  ),
+                );
+              },
+              child: CircleAvatar(
+                radius: 50,
+                backgroundImage: imagePath,
+              ),
             ),
             SizedBox(height: 20),
             Text(
@@ -78,4 +95,3 @@ class MyProfilePage extends StatelessWidget {
     );
   }
 }
-

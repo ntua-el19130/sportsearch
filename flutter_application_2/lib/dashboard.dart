@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_2/camera.dart';
 import 'package:flutter_application_2/login_page.dart';
 import 'package:flutter_application_2/find_people.dart';
 import 'package:flutter_application_2/matches/matches_screen.dart';
@@ -6,6 +7,7 @@ import 'package:flutter_application_2/My_Sports_Page.dart';
 import 'package:flutter_application_2/My_Teams_Page.dart';
 import 'package:flutter_application_2/My_Profile.dart';
 import 'package:flutter_application_2/My_Friends.dart';
+
 class DashboardPage extends StatefulWidget {
   const DashboardPage({super.key});
 
@@ -58,13 +60,13 @@ class _DashboardPageState extends State<DashboardPage> {
                 style: TextStyle(color: Color(0xffD0BCFF), fontSize: 18),
               ),
               onTap: () {
-                Navigator.of(context).push(
-                  MaterialPageRoute(
-                    builder: (BuildContext context) {
-                      return const login_page();
-                    },
-                  ),
-                );
+                // Navigator.of(context).push(
+                //   MaterialPageRoute(
+                //     builder: (BuildContext context) {
+                //       return TakePictureScreen();
+                //     },
+                //   ),
+                // );
               },
             ),
             const Divider(color: Color(0xffD0BCFF)),
@@ -81,7 +83,8 @@ class _DashboardPageState extends State<DashboardPage> {
                 Navigator.of(context).push(
                   MaterialPageRoute(
                     builder: (BuildContext context) {
-                      return const MyProfilePage();
+                      return MyProfilePage(
+                          imagePath: AssetImage('image/profile.jfif'));
                     },
                   ),
                 );
@@ -101,7 +104,7 @@ class _DashboardPageState extends State<DashboardPage> {
                 Navigator.of(context).push(
                   MaterialPageRoute(
                     builder: (BuildContext context) {
-                      return  MyFriendsPage();
+                      return MyFriendsPage();
                     },
                   ),
                 );
