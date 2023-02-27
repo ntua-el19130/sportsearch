@@ -1,8 +1,5 @@
-import 'dart:io';
 import 'package:flutter/material.dart';
-import 'package:image_picker/image_picker.dart';
-import 'package:path_provider/path_provider.dart';
-
+import 'package:flutter_application_2/Change_Profile_Picture.dart';
 
 class MyProfilePage extends StatelessWidget {
   const MyProfilePage({Key? key}) : super(key: key);
@@ -36,15 +33,11 @@ class MyProfilePage extends StatelessWidget {
                       backgroundColor: Colors.blue,
                       radius: 13,
                       child: IconButton(
-                        onPressed: () async {    final ImagePicker _picker = ImagePicker();
-    final XFile? image = await _picker.pickImage(source: ImageSource.gallery);
-    if (image != null) {
-      File file = File(image.path);
-      String dir = (await getApplicationDocumentsDirectory()).path + "/images";
-      await Directory(dir).create(recursive: true);
-      String newPath = "$dir/${DateTime.now().millisecondsSinceEpoch}.jpg";
-      file.copy(newPath);
-    }},
+                        onPressed: () {Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const ChangeProfilePicturePage()),
+                    );},
                         icon: Icon(Icons.add),
                         color: Colors.white,
                         iconSize: 20,

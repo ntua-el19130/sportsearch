@@ -6,6 +6,7 @@ import 'package:flutter_application_2/My_Sports_Page.dart';
 import 'package:flutter_application_2/My_Teams_Page.dart';
 import 'package:flutter_application_2/My_Profile.dart';
 import 'package:flutter_application_2/My_Friends.dart';
+
 class DashboardPage extends StatefulWidget {
   const DashboardPage({super.key});
 
