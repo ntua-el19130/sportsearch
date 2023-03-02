@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_2/camera.dart';
-import 'package:camera/camera.dart';
+import 'package:flutter_application_2/Change_Profile_Picture.dart';
 
 class MyProfilePage extends StatelessWidget {
-  ImageProvider imagePath = AssetImage('image/profile.jfif');
-  MyProfilePage({Key? key, required this.imagePath}) : super(key: key);
+  const MyProfilePage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -19,22 +17,35 @@ class MyProfilePage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             SizedBox(height: 20),
-            InkWell(
-              onTap: () async {
-                final cameras = await availableCameras();
-                final firstCamera = cameras.first;
-                Navigator.of(context).push(
-                  MaterialPageRoute(
-                    builder: (BuildContext context) {
-                      return TakePictureScreen(camera: firstCamera);
-                    },
+            Stack(
+              children: [
+                CircleAvatar(
+                  radius: 50,
+                  backgroundImage: AssetImage('image/profile.jfif'),
+                ),
+                Positioned(
+                  bottom: 0,
+                  right: 0,
+                  child: CircleAvatar(
+                    backgroundColor: Colors.white,
+                    radius: 15,
+                    child: CircleAvatar(
+                      backgroundColor: Colors.blue,
+                      radius: 13,
+                      child: IconButton(
+                        onPressed: () {Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const ChangeProfilePicturePage()),
+                    );},
+                        icon: Icon(Icons.add),
+                        color: Colors.white,
+                        iconSize: 20,
+                      ),
+                    ),
                   ),
-                );
-              },
-              child: CircleAvatar(
-                radius: 50,
-                backgroundImage: imagePath,
-              ),
+                ),
+              ],
             ),
             SizedBox(height: 20),
             Text(
@@ -95,3 +106,4 @@ class MyProfilePage extends StatelessWidget {
     );
   }
 }
+
